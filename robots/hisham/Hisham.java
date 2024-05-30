@@ -9,9 +9,8 @@ public class Hisham extends Robot{
             ahead(100);
             turnLeft(45);
             turnGunRight(90);
-            back(50);
-            turnRight(90);
             turnGunLeft(45);
+            
 
         }
     }
