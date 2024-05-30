@@ -1,21 +1,30 @@
 package hisham;
 import robocode.Robot;
 import robocode.ScannedRobotEvent;
+import java.util.Random;
+import java.awt.Color;
 
 public class Hisham extends Robot{
     public void run(){
-       
+       setBodyColor(Color.red);
+       setGunColor(Color.blue);
+       setBulletColor(Color.white);
         while (true){
-            ahead(100);
-            turnLeft(45);
-            turnGunRight(90);
-            turnGunLeft(45);
+            Random rand = new Random();
+            double amount = rand.nextInt(0,100);
+            ahead(amount);
+            turnGunLeft(360);
+            back(amount);
             
 
         }
     }
     public void onScannedRobot(ScannedRobotEvent e){
-            fire(1);
+            fire(3);
+            ahead(10);
+            turnRight(180);
+
+            
     }
     
 }
